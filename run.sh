@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/local/bin/bash
+
 VOLUME=${VOLUME:-"volume"}
 ALLOW=${ALLOW:-192.168.0.0/16 172.16.0.0/12}
 OWNER=${OWNER:-nobody}
