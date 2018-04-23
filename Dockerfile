@@ -1,5 +1,6 @@
 
-FROM alpine:3.6
+# base this on the official "bash" image because entrypoint script needs bash
+FROM bash
 
 RUN set -ex; \
 	apk add --no-cache --virtual .build-deps rsync
