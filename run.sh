@@ -27,4 +27,5 @@ log file = /var/log/rsync
     comment = ${VOLUME}
 EOF
 
-exec /usr/bin/rsync --no-detach --config /etc/rsyncd.conf "$@"
+exec /usr/bin/rsync --config /etc/rsyncd.conf "$@"
+#exec /usr/bin/rsync --no-detach --daemon --config /etc/rsyncd.conf "$@"
