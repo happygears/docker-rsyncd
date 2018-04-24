@@ -1,7 +1,7 @@
 #!/usr/local/bin/bash
 
 VOLUME=${VOLUME:-"volume"}
-ALLOW=${ALLOW:-192.168.0.0/16 172.16.0.0/12}
+ALLOW=${ALLOW:-192.168.0.0/16 172.16.0.0/12 10.0.0.0/8}
 OWNER=${OWNER:-nobody}
 GROUP=${GROUP:-nogroup}
 
