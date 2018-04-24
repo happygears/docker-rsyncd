@@ -13,7 +13,7 @@ GROUP=${GROUP:-nogroup}
 #        groupadd -u ${OWNER} -G rsyncdgroup rsyncduser
 #fi
 
-[ -f /etc/rsyncd.conf ] || cat <<EOF > /etc/rsyncd.conf
+cat <<EOF > /etc/rsyncd.conf
 uid = ${OWNER}
 gid = ${GROUP}
 use chroot = yes
@@ -27,5 +27,4 @@ log file = /var/log/rsync
     comment = ${VOLUME}
 EOF
 
-exec /usr/bin/rsync --config /etc/rsyncd.conf "$@"
-#exec /usr/bin/rsync --no-detach --daemon --config /etc/rsyncd.conf "$@"
+exec /usr/bin/rsync --no-detach --daemon --config /etc/rsyncd.conf "$@"
