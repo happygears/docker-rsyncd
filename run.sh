@@ -18,7 +18,7 @@ uid = ${OWNER}
 gid = ${GROUP}
 use chroot = yes
 pid file = /var/run/rsyncd.pid
-log file = /dev/stdout
+log file = /var/log/rsync
 [${VOLUME}]
     hosts deny = *
     hosts allow = ${ALLOW}
